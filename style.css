@@ -1,0 +1,195 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: turquoise;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.wrapper {
+  background-color: white;
+  height: 600px;
+  width: 800px;
+  margin: 5% auto;
+  display: flex;
+  position: relative;
+}
+
+.wrapper .newgame {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 22px;
+  margin-top: 15px;
+}
+
+.newgame {
+  background: none;
+  outline: none;
+  border: none;
+  cursor: pointer;
+}
+
+.left,
+.right {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.active {
+  background-color: cadetblue;
+}
+
+.active .player-name {
+  color: white;
+}
+
+.left .span {
+  width: 10px;
+  height: 10px;
+  background: blueviolet;
+  display: inline-block;
+  margin-bottom: 6px;
+  border-radius: 50%;
+}
+
+.left .player-name,
+.right .player-name {
+  margin-bottom: 0;
+  font-size: 2rem;
+  text-align: center;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  font-weight: 100;
+  align-items: center;
+}
+
+.scores {
+  font-size: 4rem;
+  text-align: center;
+  color: rebeccapurple;
+}
+
+.player-scores {
+  width: 120px;
+  background-color: turquoise;
+  text-align: center;
+  padding: 10px;
+}
+
+.player-scores h4 {
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  text-transform: uppercase;
+}
+
+.score {
+  font-size: 35px;
+  color: white;
+}
+
+.dices {
+  position: absolute;
+  text-transform: uppercase;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  left: 50%;
+  transform: translateX(-50%);
+  /* top: 56%; */
+  bottom: 10%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 300px;
+  align-items: center;
+}
+
+.roll-dice,
+.hold-dice {
+  font-weight: 400;
+  border: none;
+  cursor: pointer;
+  background-color: turquoise;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.dices button {
+  font-size: 18px;
+
+  border: none;
+  margin-bottom: 5px;
+  cursor: pointer;
+}
+
+.wrapper .imgs {
+  position: absolute;
+  width: 80px;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 40%;
+}
+
+#dice-1 {
+  top: 25%;
+}
+
+#dice-2 {
+  top: 40%;
+  transform: translateX(8%);
+}
+
+#dice-3 {
+  top: 40%;
+  transform: translateX(-108%);
+}
+
+.winner {
+  background-color: rgb(135, 220, 223);
+}
+
+.winner .player-name {
+  font-size: 2.5rem;
+  color: rgb(22, 72, 238);
+}
+
+.final-score {
+  /* position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 65%; */
+  width: 100px;
+  padding: 8px;
+  border: 2px solid turquoise;
+  border-radius: 5px;
+  background: none;
+  text-align: center;
+  font-weight: 600;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  text-transform: uppercase;
+}
+
+.final-score::placeholder {
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  text-transform: uppercase;
+}
+
+.final-score:focus {
+  outline: none;
+}
+
+.final-score:hover {
+  background: turquoise;
+}
